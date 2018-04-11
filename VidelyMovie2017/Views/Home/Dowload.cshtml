@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Dowload";
+    //  Layout = "~/Views/_ViewStart.cshtml";
+}
+<html>
+
+<h2>Select File To Download</h2>
+<head></head>
+<body>
+    <form>
+        <table>
+            <div>
+                @foreach (var item in ViewData.Model)
+            {
+                    @Html.ActionLink((string)item, "DownloadFile", new { filename = item });
+                    <br />
+                }
+            </div>
+        </table>
+    </form>
+</body>
+
+</html>
+
+
+
